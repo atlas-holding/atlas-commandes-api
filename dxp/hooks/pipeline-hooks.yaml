@@ -46,4 +46,14 @@
 #
 # Documentation complete : ADR_S0-080_Pipeline_Hooks.md.
 
-hooks: []
+hooks:
+  - stage: deploy 
+    position: pre 
+    name: controle-conformite 
+    image: harbor.dxp/dxp/testhook:latest 
+    command: ["sh"] 
+    args: ["-c", "echo DEMO SESSION 3 - controle de conformite avant deploiement - OK"] 
+    timeoutSeconds: 60 
+    critical: true 
+    reason: Controle de conformite exige avant tout deploiement 
+    requestedBy: Tech Lead equipe Atlas
