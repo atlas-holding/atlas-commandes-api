@@ -45,7 +45,7 @@
 # "valueFrom: serviceEnv" -- jamais de valeur en dur (secrets).
 #
 # Documentation complete : ADR_S0-080_Pipeline_Hooks.md.
-
+# test
 hooks:
   - stage: deploy 
     position: pre 
